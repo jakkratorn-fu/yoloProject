@@ -1,0 +1,30 @@
+.body{
+    /* border: 1px solid grey; */
+    height: 100%;
+    margin-left: 400px;
+    margin-right: 400px;
+    position: relative;
+    top: 50px;
+}
+.title{
+    font-size: 60px;
+    margin:30px;
+    color: #E98B75;
+}
+.home{
+    height: 100%;
+    margin-top: 30px;
+    border: 1px solid #2E4174;
+    background-color: #6D7BB3;
+    
+    
+}
+/* .mat-flat-button{
+    background-color:#E98B75;
+    margin-left: 10px;
+    position: relative;
+    left: 50px;
+    height: 50px;
+    left: 260px;
+    width: 200px;
+} */

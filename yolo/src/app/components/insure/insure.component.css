@@ -1,0 +1,14 @@
+.title{
+    color: #2E4174;
+    font-size:36px ;
+    text-align: center;
+    margin-top: 80px;
+}
+.body{
+    border: 1px solid grey;
+    height: 100%;
+    margin-left: 400px;
+    margin-right: 400px;
+    position: relative;
+    top: 50px;
+}

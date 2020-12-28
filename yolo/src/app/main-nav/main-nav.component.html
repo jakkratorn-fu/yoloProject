@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button> -->
+
+      <span style="font-size: 30px;margin-left: 5px;">
+        <a style=" color: white;
+        text-decoration: none;" routerLink="/home" routerLinkActive="active">YOLO 
+        <span style="font-size: 20px;">
+          INSURE
+        </span></a> 
+      </span>
+      <span><mat-icon>eco</mat-icon></span>
+      <span class="spacer"></span>
+        <div class="menu">
+          <a mat-list-item routerLink="/product" routerLinkActive="active">ประกันภัยทรัพย์สิน</a>
+          <a mat-list-item routerLink="/insure" routerLinkActive="active">ทํากรมธรรม์</a>
+          <a mat-list-item routerLink="/aboutus" routerLinkActive="active">เกี่ยวกับบริษัท</a>
+        </div>
+      
+        
+        <button mat-flat-button style="background-color:#6D7BB3;margin-left: 10px;">SIGN UP</button>      
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<router-outlet></router-outlet>
