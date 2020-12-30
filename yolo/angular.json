@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "yolo": {
+    "SMA_Insure": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/yolo",
+            "outputPath": "dist/SMA_Insure",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "yolo:build"
+            "browserTarget": "SMA_Insure:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "yolo:build:production"
+              "browserTarget": "SMA_Insure:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "yolo:build"
+            "browserTarget": "SMA_Insure:build"
           }
         },
         "test": {
@@ -111,16 +111,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "yolo:serve"
+            "devServerTarget": "SMA_Insure:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "yolo:serve:production"
+              "devServerTarget": "SMA_Insure:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "yolo"
+  "defaultProject": "SMA_Insure"
 }

@@ -1,1 +1,1 @@
-# yoloProject
+# SMA_InsureProject
