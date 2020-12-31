@@ -15,12 +15,19 @@ import { InsureComponent } from './components/insure/insure.component';
 import { ProductComponent } from './components/product/product.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { RegisterComponent } from './components/register/register.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'product', component: ProductComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'insure', component: InsureComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent },
+
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -35,7 +42,9 @@ const appRoutes: Routes = [
     HomeComponent,
     ProductComponent,
     AboutusComponent,
-    InsureComponent
+    InsureComponent,
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +56,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatListModule,
     MatDialogModule,
+    MatCardModule,
+    MatInputModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only set true
