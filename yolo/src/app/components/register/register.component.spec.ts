@@ -22,4 +22,11 @@ describe('RegisterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should enter require input', () => {
+      const fixture = TestBed.createComponent(RegisterComponent);
+      fixture.detectChanges();
+      const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.title_form').).toContain('Username:')
+  })
 });

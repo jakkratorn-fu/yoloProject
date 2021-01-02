@@ -14,11 +14,11 @@ import { HomeComponent } from './components/home/home.component';
 import { InsureComponent } from './components/insure/insure.component';
 import { ProductComponent } from './components/product/product.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
