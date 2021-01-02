@@ -42,7 +42,8 @@
     
   }
 input{
-  padding: 15px;
+  padding: 20px;
+  margin-top: 5px;
 }  
 label{
   margin-right: 10px;
