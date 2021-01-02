@@ -27,6 +27,6 @@ describe('RegisterComponent', () => {
       const fixture = TestBed.createComponent(RegisterComponent);
       fixture.detectChanges();
       const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.title_form').).toContain('Username:')
+    expect(compiled.querySelector('.title_form')).toContain('Username:')
   })
 });
