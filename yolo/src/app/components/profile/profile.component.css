@@ -64,4 +64,6 @@ mat-icon{
 .icon_title{
     font-weight: bold;
     color: white;
+    position: relative;
+    top: 20px;
 }

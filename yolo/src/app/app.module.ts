@@ -19,6 +19,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+// import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+// import { HttpClient } from '@angular/common/http';
+// import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -46,7 +52,7 @@ const appRoutes: Routes = [
     RegisterComponent,
     ProfileComponent
   ],
-  imports: [
+  imports: [HttpClientModule,FormsModule,ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
@@ -58,6 +64,7 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatCardModule,
     MatInputModule,
+    MatDatepickerModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only set true

@@ -1,64 +1,111 @@
 <p class="title">Small-Medium Assets Insurance</p>
-<div class="home">
-    <!-- <input
-  style="display: none"
-  type="file" (change)="onFileChanged($event)"
-  #fileInput>
-<button (click)="fileInput.click()">Select File</button>
-<button (click)="onUpload()">Upload!</button> -->
 
-<mat-card class="example-card">
-    <mat-card-header>
+<form [formGroup]="form" #insureForm="ngForm"(submit)="onSubmit(insureForm.value)" >
+<div class="home">
+   
+
+  <mat-card class="example-card">
+    <mat-card-header style="position: relative;
+    top: -18px;">
       <mat-card-title>INFORMATION</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <!-- <div style="width: 500px;">
-        
-      </div> -->
       <div class="body"><p>
-        Please imform the following forms.
-        </p>
-        
-      </div>
-        
-    </mat-card-content> 
-  </mat-card>
-  
-  <mat-card class="example-card">
-    <mat-card-header>
+        Please inform the following forms.
+      </p>
+
+      <div class="form">
+      <label for="firstname" >Firstname :
+        <span style="color: red;" *ngIf="form.get('firstname').errors?.required">
+          *</span><br>
+      </label>
+       <input class="form-control"  formControlName="firstname"
+       placeholder="firstname" ngModel name="firstname"  >
+    </div>
+
+    <div class="form">
+      <label for="lastname">Lastname :
+        <span style="color: red;" *ngIf="form.get('lastname').errors?.required">
+          *</span><br>
+      </label>
+       <input type="text"id="lastname"  formControlName="lastname"
+       ngModel name="lastname"  placeholder="lastname">
+    </div>
+
+    <div class="form">
+      <label for="email">E-mail :
+        <span style="color: red;" *ngIf="form.get('email').errors?.required">
+          *</span><br>
+      </label>
+       <input type="text"id="email"  formControlName="email"
+       ngModel name="email"  placeholder="email">   
+    </div>
+
+    <div class="form">
+      <label for="phone">Phone Number :
+        <span style="color: red;" *ngIf="form.get('phone').errors?.required">
+          *</span><br>
+      </label>
+       <input type="text"id="phone"  formControlName="phone"
+       ngModel name="phone"  placeholder="phone number">   
+    </div>
+
+    <div class="form">
+      <label for="address">Address :
+        <span style="color: red;" *ngIf="form.get('address').errors?.required">
+          *</span><br>
+      </label>
+       <input type="text"id="address"  formControlName="address"
+       ngModel name="addressssss"  placeholder="address">   
+    </div>
+
+    </div>    
+  </mat-card-content> 
+</mat-card>
+
+<mat-card class="example-card">
+    <mat-card-header style="position: relative;
+    top: -20px;">
       <mat-card-title>ASSETS</mat-card-title>
       <div style="width: 500px;">
         <mat-icon>image</mat-icon>
       </div>
     </mat-card-header>
     
-       <img mat-card-image style="height: 400px;
-       background-color: white;
-       "
-     src="./assets/ad.jpg" > 
-    
-    
-    <mat-card-content>
-      <p>
-        Please chooses image of assets you want.
+    <img mat-card-image style="height: 400px;
+       background-color: white;" [src]= "imgUrl">
+       
+     <mat-card-content>
+       <p>
+         Please chooses image of assets you want.
       </p>
+      <input type="file" #Image accept="image/*"
+      (change)="handleFileInput($event.target.files)"
+      id="img" class=""
+       ngModel name="img" required>
     </mat-card-content>
-    <mat-card-actions><input
-        style="display: none"
-        type="file" (change)="onFileChanged($event)"
-        #fileInput>
-      <button mat-button style="background-color: #6d7bb3;"  (click)="fileInput.click()">Select File</button>
-      <button mat-button style="background-color: #6d7bb3;"(click)="onUpload()" >Upload</button>
+    <mat-card-actions>
+
+      <!-- <input
+      style="display: none"
+      type="file" (change)="onFileChanged($event)"
+      #fileInput> -->
+      <!-- <button mat-button style="background-color: #6d7bb3;"  (click)="fileInput.click()">Select File</button> -->
+      <!-- <button mat-button style="background-color: #6d7bb3;"(click)="onUpload()" >Upload</button> -->
     </mat-card-actions>
   </mat-card>
   
 </div> 
 <div style="display: flex;justify-content: center;">
-    <button routerLink="/register" routerLinkActive="active" mat-flat-button style="background-color:#6D7BB3;  
-height: 70px;    
-width: 250px;
-margin-top: 80px;
-font-size:24px ;
-">
-SUBMIT</button>
+  <button mat-flat-button type="submit"  ngModel name="imgUrl" id="imgUrl"
+  [disabled]="form.invalid || Image.value=='' " (click)="addPost()"
+  style="background-color:#6D7BB3;  
+      height: 70px;    
+      width: 250px;
+      margin-top: 80px;
+      font-size:24px ;
+      ">
+      SUBMIT</button>
+
 </div>
+</form>
