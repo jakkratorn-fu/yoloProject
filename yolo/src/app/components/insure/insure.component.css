@@ -17,16 +17,41 @@
 }
 .body{
     width: 500px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
     
 }
 .mat-card {
     background: #2E4174;
     color: #fff;
+    padding: 50px;
 }
+
 .example-card {
     max-width: 500px;
     
   }
+  .form{
+    /* text-align: center; */
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+
+    
+  }
+input{
+  padding: 20px;
+  margin-top: 5px;
+}  
+label{
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 100;
+  /* position: relative; */
+  /* right: 100px; */
+}
   
   .example-header-image {
     background-size: cover;
